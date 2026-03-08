@@ -1,0 +1,88 @@
+{
+  "name": "mindstash",
+  "displayName": "Mindstash",
+  "description": "Capture notes and ideas without leaving the IDE",
+  "version": "0.1.0",
+  "publisher": "codebyahad",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": ["Notebook","Productivity","Utility"],
+  "keywords": [
+    "notes",
+    "todo",
+    "ideas",
+    "markdown",
+    "productivity",
+    "notepad",
+    "scratch"
+  ],
+  "icon": "media/marketplace-icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CodebyAhad/mindstash"
+  },
+  "homepage": "https://github.com/CodebyAhad/mindstash#readme",
+  "bugs": {
+    "url": "https://github.com/CodebyAhad/mindstash/issues"
+  },
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "mindstash",
+          "title": "Mindstash",
+          "icon": "media/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "mindstash": [
+        {
+          "type": "webview",
+          "id": "mindstash.ideaList",
+          "name": "Mindstash"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "mindstash.showIdeaPopup",
+        "title": "Mindstash: Capture idea"
+      },
+      {
+        "command": "mindstash.appendIdea",
+        "title": "Mindstash: Append idea"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "workbench.view.extension.mindstash",
+        "key": "ctrl+shift+i",
+        "mac": "cmd+shift+i"
+      },
+      {
+        "command": "mindstash.showIdeaPopup",
+        "key": "ctrl+shift+a",
+        "mac": "cmd+shift+a"
+      },
+      {
+        "command": "mindstash.appendIdea",
+        "key": "ctrl+shift+r",
+        "mac": "cmd+shift+r"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.75.0",
+    "typescript": "^5.0.0"
+  }
+}
