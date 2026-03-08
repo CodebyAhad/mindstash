@@ -5,8 +5,7 @@ out/
 dist/
 *.js.map
 
-.vscode-test/
-.vscode/*.code-workspace
+.vscode/
 
 .idea/
 *.suo
