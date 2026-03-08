@@ -6,6 +6,7 @@ dist/
 *.js.map
 
 .vscode/
+*.vsix
 
 .idea/
 *.suo

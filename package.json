@@ -8,7 +8,7 @@
   "engines": {
     "vscode": "^1.75.0"
   },
-  "categories": ["Notebook","Productivity","Utility"],
+  "categories": ["Notebooks", "Other"],
   "keywords": [
     "notes",
     "todo",
